@@ -2,10 +2,20 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Tahoma;
+}
+
+ul {
+    list-style: none; 
+}
+.clearfix {
+    clear: both;
 }
 /* End Global */
 
@@ -34,20 +44,102 @@ nav ul li:last-child:after {
 }
 /* End Header */
 
+/* Start main */ 
+main {
+    background-color: #EEE ;
+    padding: 10px
+}
+main p {
+    text-align: center
+}
+main p span {
+    font-weight: bold;
+    color: rgb(66, 65, 65)
+}
+main p mark {
+    background-color: palevioletred; 
+    color: white 
+}
+/* End main */
+
 /* Start Articles */
-article {
+.post {
+    width: 70%;
+    float: left
+}
+.post article {
     background-color: #f6f6f6;
     border: 1px solid #CCC;
     margin: 20px;
 }
-article header {
+.post article header {
     background-color: #e2e2e2;
     padding: 15px;
 }
-article section {
+.post article section {
     padding: 15px;
 }
+.post article section details {
+    margin: 10px 0;
+}
+.post article section .long-link {
+    width: 200px
+}
+.post article section code {
+    border: 1px solid #CCC;
+    display: block;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    max-width: 500px
+}
+.post article section .img-figure {
+    border: 1px solid #CCC;
+    background-color: #efdede;
+    margin-top: 10px;
+    padding: 10px;
+    max-width: 875px;
+    text-align: center
+} 
+.post article section .img-figure img {
+    border: 1px solid #CCC;
+    background-color: #fff;
+    padding: 3px
+}
 /* End Articles */
+
+/* Start Sidebar */
+aside {
+    width: 30%;
+    float: right;
+}
+
+aside section {
+    background-color: #EEE;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #CCC;
+    margin-bottom: 10px
+}
+aside section h3 {
+    background-color: #d1d1d1;
+    padding: 10px
+}
+aside section ul {
+    margin-top: 10px
+}
+aside section ul li {
+    line-height: 1.8;
+}
+
+.meters div {
+    margin-top: 10px;
+}
+
+form {
+    margin: 10px 0;
+}
+/* End Sidebar */
 
 /* Start Footer */
 footer {
