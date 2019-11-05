@@ -37,33 +37,165 @@
     </nav>
     <!--End Navigation-->
 
+    <!--Start main-->
+    <main>
+        <p>Welcome to <span><mark>HTML5</mark> Course</span> from my page</p>
+    </main>
+    <!--End main-->
+
     <!--Start Articles-->
+    <div class="post">
     <article>
         <header>
-            <h3>Article #1</h3>
-            <p>Created By <span>Aia</span> On 16/10/2019</p>
+            <h3>Our New Framework Milestone</h3>
+        <!-- Using Time & date time which is usefull in 3 things :  1- لو عندي معاد عالكالندر الأفضل أستخدم التايم سبان 
+        2- لو حد من اليابات مثلا بدو يستخدم الموقع راح يعرف يحول الوقت للوقت الللوكالي اللي عنده اذا معمول بالتايم سبان
+        3- محركات البحث اللي بتطلعلي النتائج بناء على التايم سبان -->
+            <p>Created By <span>Aia</span> On <time datetime="2019-10-20 16:20:22">Oct, 20th, 2019</time></p>
         </header>
-        <section><p>This is Article content number #1</p></section>
+        <section>
+            <p>This is Article content number #1</p>
+            <div>
+                Design: <progress value="7" max="10"></progress> <br>
+                Coding: <progress value="65" max="100"></progress>
+            </div>
+        </section>
     </article>
 
     <article>
         <header>
-            <h3>Article #2</h3>
+            <h3>Article about using &lt;details&gt;</h3>
             <p>Created By <span>Areej</span> On 16/10/2019</p>
         </header>
-        <section><p>This is Article content number #2</p></section>
+        <section>
+            <p>This is Article content number #2</p>
+            <p>
+                <details>
+                    <summary>References</summary>
+                    <ul>
+                        <li><a href="www.google.com">Ref. 1</a></li>
+                        <li>Ref. 2</li>
+                        <li>Ref. 3</li>
+                    </ul>
+                </details>
+            </p>
+        </section>
     </article>
 
     <article>
         <header>
-            <h3>Article #3</h3>
+            <h3>Article about using &lt;wbr&gt; </h3>
             <p>Created By <span>Asmaa</span> On 16/10/2019</p>
         </header>
         <section><p>This is Article content number #3</p></section>
+        <div class="long-link">
+                https://www.testing-long-link.com<wbr>\product.php?id=300&cat=100&test=mainSection</wbr>
+                <br> 
+
+            https://<wbr>www.testing-long-link.com</wbr><wbr>\product.php?id=300</wbr><wbr>&cat=100</wbr><wbr>&test=mainSection</wbr>
+        </div>
     </article>
 
+    <article>
+        <header>
+            <h3>Article about using code inside &lt;figure&gt; </h3>
+            <p>Created By <span>Asmaa</span> On 16/10/2019</p>
+        </header>
+        <section>
+            <p>This code describe the div syntax</p>
+            <figure>
+                <figcaption>This div syntax 1-3</figcaption>
+                <code>
+                    &lt;div&gt;This is normal div &lt;/div&gt;
+                </code>
+            </figure>
+        </section>
+    </article>
+
+    <article>
+            <header>
+                <h3>Article about using image inside &lt;figure&gt; </h3>
+                <p>Created By <span>Asmaa</span> On 16/10/2019</p>
+            </header>
+            <section>
+                <p>This code describe the image inside figure</p>
+                <!-- <dialog open>This is dialog from HTML5</dialog> -->
+                <figure class="img-figure">
+                    <img src="cat1.jpg" alt="Cat" title="My Cat" />
+                    <img src="cat1.jpg" alt="Cat" title="My Cat" />
+                    <img src="cat1.jpg" alt="Cat" title="My Cat" />
+                    <figcaption>Three Images contain cats. See the full list <a href="#">Here</a></figcaption>
+                </figure>
+            </section>
+        </article>
+    </div>
     <!--End Articles-->
 
+    <!--Start Sidebar-->
+    <aside>
+        <section class="links">
+            <h3>Categories</h3>
+            <ul>
+                <li>Intro</li>
+                <li>Semantics</li>
+                <li>New Attribute</li>
+                <li>Multimedia</li>
+            </ul>
+        </section>
+        <section class="meters">
+                <h3>Performance</h3>
+                <div>
+                    CPU : <meter min="0" max="1" value="0.6" low="0.4" high="0.8" optimum="0.7"></meter> 
+                </div>
+        </section>
+        <section class="top-member">
+            <h3>Top Members</h3>
+            <ul>
+                <li>Aia : 120 point</li>
+                <li>Areej : 90 point</li>
+                <li>Asmaa : 80 point</li>
+                <li><bdi>أزهار</bdi> : 100 point</li>
+                <!-- be directional isolation عزل اتجاه العنصر الحالي عن بقية العناصر-->
+            </ul>
+        </section>
+        <!-- #poll يعني استطلاع رأي-->
+        <section class="poll">
+            <h3>What is your best browser?</h3>
+            <form>
+                <input list="browsers">
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Safari"></option>
+                    <option value="Same">
+                    <option value="Opera">
+                    <option value="Opacity">
+                    <option value="Mozilla Firefox">
+                    <option value="Internet Explorer">
+                </datalist>
+                <input type="submit" value="Choose">
+            </form>
+        </section>
+        <section class="calculate-age">
+            <h3>Calculate Your Age In Days :</h3>
+            <form oninput="result.value = parseInt(age.value) * parseInt(days.value) + ' Days' ">
+                <input type="text" name="age" placeholder="Input Your Age in Years">
+                <input type="hidden" name="days" value="365">
+                <output name="result"></output>
+            </form>
+        </section>
+        <section>
+            <h3>Today's Audio </h3>
+            <audio controls> <!-- autoplay loop muted
+            preload = "auto"اول ما افتح الصفحة يحمله or "none"ما يحملو الا لما اضغط عليه اشغله or "metadata"بيحمل بس معلومات عن الأوديو-->
+                <source src="093.mp3" type="audio/mpeg">
+               <!-- <source src="093.ogg" type="audio/ogg"> --> 
+                Your Browser Dose Not Support Audio Technology
+            </audio>
+        </section>
+    </aside>
+    <!--End Sidebar-->
+
+    <div class="clearfix"></div>
     <!--Start Footer-->
     <footer>
         Copyright 2019 &copy; All Right Reserved
